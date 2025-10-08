@@ -8,4 +8,4 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 4
 vim.opt.hlsearch = true
 
-require("config.mappings")
+require("mappings")
