@@ -16,6 +16,11 @@ vim.keymap.set("n", "<Leader>/", ":nohlsearch<cr>")
 -- </generic mappings>
 
 -- <plaintex mappings>
-vim.keymap.set("n", "<LocalLeader><LocalLeader>", ":w<cr> :silent !pdftex %<cr>")
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "plaintex",
+  callback = function(event)
+		vim.keymap.set("n", "<LocalLeader><LocalLeader>", ":w<cr> :silent !pdftex %<cr>", {buffer = event.buf})
+  end,
+})
 -- </plaintex mappings>
 
