@@ -1,1 +1,3 @@
-# My neovim config files
+# My neovim config files*
+
+*single file, actually
