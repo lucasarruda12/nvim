@@ -19,7 +19,12 @@ vim.keymap.set("n", "<Leader>/", ":nohlsearch<cr>")
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "plaintex",
   callback = function(event)
-		vim.keymap.set("n", "<LocalLeader><LocalLeader>", ":w<cr> :silent !$TEXCC %<cr>", {buffer = event.buf})
+		-- Write and compile
+		vim.keymap.set(
+			"n", "<LocalLeader><LocalLeader>",
+			":w<cr> | :silent !luatex %<cr>",
+			{buffer = event.buf}
+		)
   end,
 })
 -- </plaintex mappings>
