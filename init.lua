@@ -5,8 +5,12 @@ vim.g.maplocalleader = ","
 vim.opt.number = true
 vim.opt.scrolloff = 10
 vim.opt.termguicolors = false
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
+---- <tabs>
+  vim.opt.tabstop = 2
+  vim.opt.shiftwidth = 2
+  vim.opt.softtabstop = 2
+  vim.opt.expandtab = true
+---- </tabs>
 vim.opt.hlsearch = true
 -- </options>
 
